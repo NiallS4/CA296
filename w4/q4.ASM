@@ -1,0 +1,9 @@
+	MOV AL, 40
+	MOV BL, 40
+Loop:
+	MOV [AL], BL
+	INC AL
+	INC BL
+	CMP AL, 49
+	JNZ LOOP
+	END

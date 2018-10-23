@@ -1,0 +1,10 @@
+	MOV AL, 41
+	MOV BL, 1A
+	MOV CL, C0
+Loop:
+	MOV [CL], AL
+	INC AL
+	INC CL
+	DEC BL
+	JNZ LOOP
+	END
