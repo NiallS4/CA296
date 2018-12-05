@@ -1,7 +1,0 @@
-MOV AL, 41
-MOV [C0], AL
-MOV AL, 42
-MOV [C1], AL
-MOV AL, 43
-MOV [C2], AL
-END
