@@ -1,8 +1,0 @@
-	MOV CL, 08
-	MOV BL, [CL]
-Loop:
-	ADD AL, BL
-	DEC CL
-	MOV BL, [CL]
-	JNZ LOOP
-	END
