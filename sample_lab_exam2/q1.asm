@@ -8,12 +8,12 @@
 	DB 50					; Interrupt at address 50
 
 initialise:
-	STI						; Enable hardware interrupts
+	STI					; Enable hardware interrupts
 	MOV BL, C0				; Set BL to start at position C0
 	MOV CL, C1				; Set CL to start at position C1
 
 mainCode:
-	JMP mainCode			; Infinite loop
+	JMP mainCode				; Infinite loop
 
 	ORG 50
 	PUSHF					; Save flags
@@ -25,14 +25,14 @@ mainCode:
 
 zero:
 	MOV AL, 30				; Move ASCII code for 0 into AL
-	MOV [BL], AL			; Display on VDU
+	MOV [BL], AL				; Display on VDU
 	ADD BL, 02				; Increment BL by 2
 	POPF					; Restore flags
 	IRET
 
 one:
 	MOV AL, 31				; Move ASCII code for 1 into AL
-	MOV [CL], Al			; Display on VDU
+	MOV [CL], Al				; Display on VDU
 	ADD CL, 02				; Increment CL by 2
 	POPF					; Restore flags
 	IRET
