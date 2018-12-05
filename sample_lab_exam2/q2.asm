@@ -35,16 +35,16 @@ loop:
 	ORG 50
 	PUSHF					; Save flags
 	PUSH BL					; Backup BL to stack
-	MOV BL, [AL]			; Move number in AL to BL
+	MOV BL, [AL]				; Move number in AL to BL
 	MOD BL, 02				; Divide BL by 2
 	CMP BL, 00				; Check if BL is now 0 (i.e. number is even)
 	POP BL					; Restore BL to original number
 	JZ exit					; If BL is 0 exit procedure
-	JMP continue			; Else continue
+	JMP continue				; Else continue
 
 continue:
 	PUSH BL					; Backup BL to stack
-	MOV BL, [AL]			; Move number in AL to BL
+	MOV BL, [AL]				; Move number in AL to BL
 	ADD CL, BL				; Store sum of odd numbers in CL
 	POP BL					; Restore BL to original number
 
