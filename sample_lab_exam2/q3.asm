@@ -30,12 +30,12 @@ end:
 	DIV AL, 10			; Move digit to RHS in AL
 
 	ADD AL, A0			; Get address of 1st character
-	MOV BL, [AL]		; Get ASCII code from table
+	MOV BL, [AL]			; Get ASCII code from table
 	PUSH BL
 	POP AL
 	OUT 02				; Display on Seven Segment Display
 	ADD CL, 90			; Get address of 2nd character
-	MOV BL, [CL]		; Get ASCII code from table
+	MOV BL, [CL]			; Get ASCII code from table
 	PUSH BL
 	POP AL
 	OUT 02				; Display on Seven Segment Display
